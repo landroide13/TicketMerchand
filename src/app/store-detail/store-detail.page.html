@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/super-view"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Store Detail #{{ store.id }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-icon name="business" slot="start"></ion-icon>
+          <ion-label>{{ store.name }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="move" slot="start"></ion-icon>
+        {{ store.address }}
+      </ion-item>
+      <ion-item>
+        <ion-icon name="Call" slot="start"></ion-icon>
+        {{ store.contact }}
+      </ion-item>
+      <ion-button expand="block" color="danger" (click)="deleteStore()">Delete</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

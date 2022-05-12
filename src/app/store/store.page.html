@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/super-view"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Stores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid> 
+    <ion-col>
+      <h3>Stores List</h3>
+    </ion-col>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let store of Stores" [routerLink]="['/store',store.id]">
+      <ion-label>
+        <h2>{{ store.name }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" (click)="createStore()">Create Store</ion-button>
+
+  
+
+</ion-content>

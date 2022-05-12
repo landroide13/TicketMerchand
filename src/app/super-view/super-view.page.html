@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Supervisor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+ 
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round"  expand="block" (click)="createTicket()">Create Ticket</ion-button>
+      </ion-col> 
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round"  expand="block" (click)="createStore()">Store List</ion-button>
+      </ion-col> 
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round"  expand="block" (click)="createMerchandiser()">Merchandiser List</ion-button>
+      </ion-col> 
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

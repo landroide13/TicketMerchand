@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/store"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Create Store</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+
+    <ion-card color="light">
+      <ion-card-content>
+        <ion-input type="text" placeholder="Add Store Name" #name></ion-input>
+        <ion-input type="text" placeholder="Add Store Address" #addr></ion-input>
+        <ion-input type="text" placeholder="Add Store Contact" #cont></ion-input>
+        <ion-button expand="block" color="success" (click)="createStore(name, addr, cont)">
+          Add New Store
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-grid>
+
+</ion-content>
