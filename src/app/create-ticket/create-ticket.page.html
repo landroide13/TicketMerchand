@@ -22,17 +22,17 @@
       </ion-item>
 
       <ion-item>
-        <ion-select placeholder="Select Store">
-          <ion-select-option *ngFor="let store of Stores" [value]="store">
-            <ion-input type="text" formControlName="store" [value]="">{{ store.name }}</ion-input>
+        <ion-select formControlName="store" placeholder="Select Store">
+          <ion-select-option *ngFor="let store of Stores" [value]="store.name">
+           {{ store.name }}
           </ion-select-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-select placeholder="Select Merchandiser">
-          <ion-select-option *ngFor="let mer of Merch" [value]="mer">
-            <ion-input type="text" formControlName="merchandiser" [value]="">{{ mer.name }}</ion-input>
+        <ion-select formControlName="merchandiser" placeholder="Select Merchandiser">
+          <ion-select-option *ngFor="let mer of Merch" [value]="mer.name">
+            {{ mer.name }}
           </ion-select-option>
         </ion-select>
       </ion-item>  
