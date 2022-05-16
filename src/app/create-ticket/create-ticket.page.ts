@@ -6,6 +6,9 @@ import { StoreServiceService } from '../store/store-service.service';
 import { Store } from '../store/store.model';
 import { TicketService } from '../ticket/ticket.service';
 
+import { FormGroup, FormBuilder } from "@angular/forms";
+
+
 @Component({
   selector: 'app-create-ticket',
   templateUrl: './create-ticket.page.html',
@@ -16,24 +19,32 @@ export class CreateTicketPage implements OnInit {
   Stores = [];
   Merch = [];
 
+  ticketForm: FormGroup;
+
   seletedStore: Store;
   selectedMerchandiser: Merchandiser;
 
-  constructor(private ticketServ: TicketService, private router: Router,
+  constructor(private ticketServ: TicketService, private router: Router, public formBuilder: FormBuilder,
               private storeServ: StoreServiceService, private merServ: MerchandiserService) { }
 
   ngOnInit() {
     this.Stores =  this.storeServ.getStores();
     this.Merch = this.merServ.getMerchandisers();
-  }
-  
-  displaySto(){
-    this.Stores =  this.storeServ.getStores();
+
+    this.ticketForm = this.formBuilder.group({
+      title: [''],
+      address: [''],
+      store: [''],
+      merchandiser: [''],
+   })
   }
 
-  displayMer(){
-    this.Merch = this.merServ.getMerchandisers();
+  onSubmit(){
+    console.log(this.ticketForm.value);
+    this.ticketServ.addTicket(this.ticketForm.value.title,this.ticketForm.value.address, this.ticketForm.value.store, this.ticketForm.value.merchandiser);
+    this.router.navigate(['/ticket'])
   }
+  
 
   createTicket(title, address, store, merchandiser){
     this.ticketServ.addTicket(title.value, address.value, store.value, merchandiser.value);

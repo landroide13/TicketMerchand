@@ -6,12 +6,15 @@ import { IonicModule } from '@ionic/angular';
 
 import { CreateTicketPageRoutingModule } from './create-ticket-routing.module';
 
+import { ReactiveFormsModule } from '@angular/forms'
+
 import { CreateTicketPage } from './create-ticket.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     CreateTicketPageRoutingModule
   ],
