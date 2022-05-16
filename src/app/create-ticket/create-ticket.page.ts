@@ -46,8 +46,8 @@ export class CreateTicketPage implements OnInit {
   }
   
 
-  createTicket(title, address, store, merchandiser){
-    this.ticketServ.addTicket(title.value, address.value, store.value, merchandiser.value);
-    this.router.navigate(['/ticket'])
-  }
+  // createTicket(title, address, store, merchandiser){
+  //   this.ticketServ.addTicket(title.value, address.value, store.value, merchandiser.value);
+  //   this.router.navigate(['/ticket'])
+  // }
 }
