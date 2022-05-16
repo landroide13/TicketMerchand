@@ -3,7 +3,6 @@ export interface Ticket{
     title: string;
     address: string;
     store: string;
-    merchId: number;
-    storeId: number;
+    merch: string;
     comments?:string;
 }

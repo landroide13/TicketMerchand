@@ -21,7 +21,16 @@ const routes: Routes = [
   },
   {
     path: 'ticket',
-    loadChildren: () => import('./ticket/ticket.module').then( m => m.TicketPageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./ticket/ticket.module').then( m => m.TicketPageModule)
+      },
+      {
+        path: ':ticketId',
+        loadChildren: () => import('./ticket-detail/ticket-detail.module').then( m => m.TicketDetailPageModule)
+      }
+    ]
   },
   {
     path: 'store',
@@ -60,12 +69,7 @@ const routes: Routes = [
   {
     path: 'create-ticket',
     loadChildren: () => import('./create-ticket/create-ticket.module').then( m => m.CreateTicketPageModule)
-  },
-  {
-    path: 'ticket-detail',
-    loadChildren: () => import('./ticket-detail/ticket-detail.module').then( m => m.TicketDetailPageModule)
   }
-  
 ];
 
 @NgModule({

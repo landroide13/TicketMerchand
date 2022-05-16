@@ -21,7 +21,7 @@ export class StoreDetailPage implements OnInit {
       const id = paramMap.get('storeId');
       this.store = this.storeServ.getStore(Number(id))
     })
-  }
+  } 
 
   async deleteStore(){   
     const alertEle = await this.alertCtr.create({
