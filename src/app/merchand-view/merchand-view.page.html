@@ -9,4 +9,20 @@
 
 <ion-content>
 
+  <ion-grid> 
+    <ion-col>
+      <h3>Tickets List</h3>
+    </ion-col>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let ticket of Tickets" [routerLink]="['/ticket',ticket.id]">
+      <ion-label>
+        <h2>{{ ticket.title }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" color="success" (click)="createStore()">Create Store</ion-button>
+
 </ion-content>

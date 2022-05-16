@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TicketService } from '../ticket/ticket.service';
 
 @Component({
   selector: 'app-merchand-view',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MerchandViewPage implements OnInit {
 
-  constructor() { }
+  Tickets = [];
+
+  constructor(private router: Router, private ticketServ: TicketService) { }
 
   ngOnInit() {
+    this.Tickets = this.ticketServ.getTickets();
   }
+
+
+
+
+
 
 }
