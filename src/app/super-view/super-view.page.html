@@ -9,25 +9,31 @@
 
 <ion-content>
 
-  <ion-grid>
+  <ion-grid  class="ion-margin-top">
+
+    <ion-card>
+      <ion-card-content>
  
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round"  expand="block" (click)="createTicket()">Create Ticket</ion-button>
-      </ion-col> 
-    </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button  expand="block" color="tertiary" (click)="createTicket()">Tickets List</ion-button>
+          </ion-col> 
+        </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round"  expand="block" (click)="createStore()">Store List</ion-button>
-      </ion-col> 
-    </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button  expand="block" color="tertiary" (click)="createStore()">Store List</ion-button>
+          </ion-col> 
+        </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round"  expand="block" (click)="createMerchandiser()">Merchandiser List</ion-button>
-      </ion-col> 
-    </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" color="tertiary" (click)="createMerchandiser()">Merchandiser List</ion-button>
+          </ion-col> 
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
 
   </ion-grid>
 

@@ -20,7 +20,7 @@
         <ion-label position="floating">Address</ion-label>
         <ion-input formControlName="address" type="text" required></ion-input>
       </ion-item>
-
+ 
       <ion-item>
         <ion-select formControlName="store" placeholder="Select Store">
           <ion-select-option *ngFor="let store of Stores" [value]="store.name">
@@ -30,7 +30,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-select formControlName="merchandiser" placeholder="Select Merchandiser">
+        <ion-select formControlName="merchandiser" placeholder="Choose Merchandiser">
           <ion-select-option *ngFor="let mer of Merch" [value]="mer.name">
             {{ mer.name }}
           </ion-select-option>

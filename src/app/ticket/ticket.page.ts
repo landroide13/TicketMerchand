@@ -25,6 +25,6 @@ export class TicketPage implements OnInit {
     this.router.navigate(['/create-ticket']);
   }
 
-
+   
 
 }

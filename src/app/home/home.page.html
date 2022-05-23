@@ -8,19 +8,23 @@
 
 <ion-content>
 
-  <ion-grid>
+  <ion-grid class="ion-margin-top">
 
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round"  expand="block" (click)="goToSup()">Sign In as Supervisor</ion-button>
-      </ion-col> 
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-button shape="round"  expand="block" (click)="goToMer()">Sign In as Merchandiser</ion-button>      
-      </ion-col>
-    </ion-row>     
+    <ion-card>
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-button  expand="block" (click)="goToSup()" color="tertiary">Sign In as Supervisor</ion-button>
+          </ion-col> 
+        </ion-row>
+        
+        <ion-row>
+          <ion-col>
+            <ion-button  expand="block" (click)="goToMer()" color="tertiary">Sign In as Merchandiser</ion-button>      
+          </ion-col>
+        </ion-row>  
+      </ion-card-content>
+  </ion-card>
            
   </ion-grid>
 

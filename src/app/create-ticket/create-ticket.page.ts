@@ -39,15 +39,10 @@ export class CreateTicketPage implements OnInit {
    })
   }
 
-  onSubmit(){
+  onSubmit(){ 
     console.log(this.ticketForm.value);
     this.ticketServ.addTicket(this.ticketForm.value.title,this.ticketForm.value.address, this.ticketForm.value.store, this.ticketForm.value.merchandiser);
     this.router.navigate(['/ticket'])
   }
   
-
-  // createTicket(title, address, store, merchandiser){
-  //   this.ticketServ.addTicket(title.value, address.value, store.value, merchandiser.value);
-  //   this.router.navigate(['/ticket'])
-  // }
 }

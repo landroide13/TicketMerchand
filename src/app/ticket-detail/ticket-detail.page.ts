@@ -18,17 +18,17 @@ export class TicketDetailPage implements OnInit {
 
   ngOnInit() { 
     this.acRoute.paramMap.subscribe(paramMap => {
-      const id = paramMap.get('ticketId');
+      const id = paramMap.get('ticketId'); 
       this.ticket = this.ticketServ.getTicket(Number(id))
     })
   }
 
- async deleteStore(){
+ async deleteTicket(){
     const alertEle = await this.alertCtr.create({
       header: "Are you sure, you want delete it ?",
       buttons:[
         {
-          text: "Cancel",
+          text: "Cancel",  
           role: 'cancel'
         },
         {

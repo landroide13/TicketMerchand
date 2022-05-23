@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full'  
   }, 
   {
     path: 'super-view',
@@ -29,7 +29,7 @@ const routes: Routes = [
       {
         path: ':ticketId',
         loadChildren: () => import('./ticket-detail/ticket-detail.module').then( m => m.TicketDetailPageModule)
-      }
+      } 
     ]
   },
   {

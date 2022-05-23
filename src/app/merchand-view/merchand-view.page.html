@@ -15,13 +15,25 @@
     </ion-col>
   </ion-grid>
 
-  <ion-list>
-    <ion-item *ngFor="let ticket of Tickets" [routerLink]="['/ticket',ticket.id]">
-      <ion-label>
-        <h2>{{ ticket.title }}</h2>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          
+          <ion-list>
+            <ion-item *ngFor="let ticket of Tickets" [routerLink]="['/ticket',ticket.id]">
+              <ion-label>
+                <h2>{{ ticket.title }}</h2>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+
+        </ion-col>
+      </ion-row>
+      
+    </ion-card-content>
+  </ion-card>    
 
   <ion-button expand="block" color="success" >Create Store</ion-button>
 
